@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Homework 2: Styling Your Page">
+    <title>Homework 2: Styling Your Page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="course-name" href="#assignment">WEB DESIGN <span>/</span> 101</a>
+      <span class="view-label">STUDENT VIEW</span>
+    </header>
+
+    <main id="assignment">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="#assignment">Course</a>
+        <span aria-hidden="true">/</span>
+        <a href="#assignment">CSS Foundations &amp; the Box Model</a>
+        <span aria-hidden="true">/</span>
+        <span>Homework 2</span>
+      </nav>
+
+      <section class="assignment-card" aria-labelledby="assignment-title">
+        <div class="assignment-topline">
+          <span class="assignment-type"><span aria-hidden="true">✳</span> HOMEWORK</span>
+          <span class="overdue"><span aria-hidden="true"></span> OVERDUE</span>
+        </div>
+
+        <h1 id="assignment-title">Styling Your Page</h1>
+        <p class="intro">
+          Make your first page feel like yours. Use CSS to bring clarity,
+          personality, and thoughtful spacing to your Homework 1 page.
+        </p>
+
+        <div class="assignment-facts" aria-label="Assignment details">
+          <div class="fact">
+            <span class="fact-label">DUE DATE</span>
+            <strong>October 25</strong>
+          </div>
+          <div class="fact">
+            <span class="fact-label">LATE DEADLINE</span>
+            <strong>November 1, 10:59 PM CST</strong>
+          </div>
+          <div class="fact">
+            <span class="fact-label">POINTS</span>
+            <strong>50 points</strong>
+          </div>
+        </div>
+
+        <div class="late-note">
+          <span class="late-icon" aria-hidden="true">↗</span>
+          <p><strong>Late submissions are accepted</strong> until November 1 at 10:59 PM CST.</p>
+        </div>
+
+        <section class="question" aria-labelledby="question-title">
+          <div class="question-heading">
+            <span class="question-number">Q1</span>
+            <div>
+              <h2 id="question-title">Give your page a visual style</h2>
+              <p>Open response <span aria-hidden="true">·</span> 50 points</p>
+            </div>
+          </div>
+
+          <p class="question-prompt">
+            Add a linked CSS file to your Homework 1 page. Use the checklist below
+            to make design choices that are both intentional and easy to see.
+          </p>
+
+          <ul class="requirements">
+            <li>
+              <span class="check" aria-hidden="true">01</span>
+              <span><strong>Link an external stylesheet.</strong> Add a
+                <code>&lt;link rel="stylesheet"&gt;</code> tag in the
+                <code>&lt;head&gt;</code> of your HTML file.</span>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">02</span>
+              <span><strong>Use three selector types.</strong> Include a type
+                selector (<code>p</code>), a class selector
+                (<code>.classname</code>), and an ID selector (<code>#id</code>).</span>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">03</span>
+              <span><strong>Show the box model on at least three elements.</strong>
+                Deliberately adjust margin, padding, and border to create space
+                and separation.</span>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">04</span>
+              <span><strong>Choose at least two complementary colors.</strong>
+                Apply them to text, backgrounds, or borders.</span>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">05</span>
+              <span><strong>Make it feel finished.</strong> Aim for consistent
+                spacing, color, and typography—not the browser defaults.</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="rubric" aria-labelledby="rubric-title">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">HOW YOU’LL BE GRADED</span>
+              <h2 id="rubric-title">Grading rubric</h2>
+            </div>
+            <span class="total-points">50 <span>PTS</span></span>
+          </div>
+
+          <div class="rubric-list">
+            <article class="rubric-item">
+              <div class="rubric-title">
+                <h3>Linked CSS file</h3>
+                <span>10 pts</span>
+              </div>
+              <p>External CSS is linked in the document head and visibly styles the page.</p>
+              <div class="rubric-track"><span></span></div>
+            </article>
+            <article class="rubric-item">
+              <div class="rubric-title">
+                <h3>Three selector types</h3>
+                <span>10 pts</span>
+              </div>
+              <p>Type, class, and ID selectors are correctly written and applied.</p>
+              <div class="rubric-track"><span></span></div>
+            </article>
+            <article class="rubric-item">
+              <div class="rubric-title">
+                <h3>Box model demonstrated</h3>
+                <span>15 pts</span>
+              </div>
+              <p>At least three elements use deliberate margin, padding, and border.</p>
+              <div class="rubric-track"><span></span></div>
+            </article>
+            <article class="rubric-item">
+              <div class="rubric-title">
+                <h3>Color scheme</h3>
+                <span>10 pts</span>
+              </div>
+              <p>Two or more complementary colors create a considered palette.</p>
+              <div class="rubric-track"><span></span></div>
+            </article>
+            <article class="rubric-item">
+              <div class="rubric-title">
+                <h3>Overall visual coherence</h3>
+                <span>5 pts</span>
+              </div>
+              <p>Consistent choices make the page feel polished and intentional.</p>
+              <div class="rubric-track"><span></span></div>
+            </article>
+          </div>
+        </section>
+
+        <footer class="submission">
+          <span class="submission-icon" aria-hidden="true">↗</span>
+          <p><strong>Ready to submit?</strong><br>Share your GitHub repository URL. Make sure your CSS file is visible in the repo.</p>
+        </footer>
+      </section>
+      <p class="course-footer">CSS FOUNDATIONS &amp; THE BOX MODEL <span>•</span> HOMEWORK 2</p>
+    </main>
+  </body>
+</html>
