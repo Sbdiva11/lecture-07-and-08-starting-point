@@ -3,198 +3,149 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Homework 2: Styling Your Page">
-    <title>Homework 2: Styling Your Page</title>
+    <meta name="description" content="A simple one-page site about the hobby of film photography.">
+    <title>Grain &amp; Light — Film Photography</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="course-name" href="#assignment">WEB DESIGN <span>/</span> 101</a>
-      <span class="view-label">STUDENT VIEW</span>
+      <a class="brand" href="#top">GRAIN <span>&amp;</span> LIGHT</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#gear">Gear</a>
+        <a href="#process">Process</a>
+        <a href="#tips">Tips</a>
+      </nav>
     </header>
 
-    <main id="assignment">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="#assignment">Course</a>
-        <span aria-hidden="true">/</span>
-        <a href="#assignment">CSS Foundations &amp; the Box Model</a>
-        <span aria-hidden="true">/</span>
-        <span>Homework 2</span>
-      </nav>
-
-      <section class="assignment-card" aria-labelledby="assignment-title">
-        <div class="assignment-topline">
-          <span class="assignment-type"><span aria-hidden="true">✳</span> HOMEWORK</span>
-          <span class="overdue"><span aria-hidden="true"></span> OVERDUE</span>
-        </div>
-
-        <h1 id="assignment-title">Styling Your Page</h1>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <span class="eyebrow">A HOBBY WORTH SLOWING DOWN FOR</span>
+        <h1 id="hero-title">The quiet joy of shooting film</h1>
         <p class="intro">
-          Make your first page feel like yours. Use CSS to bring clarity,
-          personality, and thoughtful spacing to your Homework 1 page.
+          Film photography trades instant feedback for intention. Thirty-six
+          frames, no screen to check, and a little patience before the image
+          finally appears. This is a small corner of the internet about why
+          that trade-off is so rewarding.
         </p>
-
-        <div class="assignment-facts" aria-label="Assignment details">
+        <div class="hero-facts" aria-label="Quick facts">
           <div class="fact">
-            <span class="fact-label">DUE DATE</span>
-            <strong>October 25</strong>
+            <span class="fact-label">FORMAT</span>
+            <strong>35mm &amp; 120</strong>
           </div>
           <div class="fact">
-            <span class="fact-label">LATE DEADLINE</span>
-            <strong>November 1, 10:59 PM CST</strong>
+            <span class="fact-label">FRAMES PER ROLL</span>
+            <strong>24–36</strong>
           </div>
           <div class="fact">
-            <span class="fact-label">POINTS</span>
-            <strong>50 points</strong>
+            <span class="fact-label">FAVORITE LIGHT</span>
+            <strong>Golden hour</strong>
           </div>
         </div>
+      </section>
 
-        <div class="late-note">
-          <span class="late-icon" aria-hidden="true">↗</span>
-          <p><strong>Late submissions are accepted</strong> until November 1 at 10:59 PM CST.</p>
+      <section id="about" class="block" aria-labelledby="about-title">
+        <span class="eyebrow">ABOUT</span>
+        <h2 id="about-title">Why film?</h2>
+        <p class="block-lead">
+          Digital is convenient, but film makes every frame count. There is a
+          tactile ritual to loading a roll, advancing the lever, and feeling
+          the shutter click. You learn to see light before you press the
+          button — and that habit sticks with you everywhere.
+        </p>
+        <div class="note">
+          <span class="note-icon" aria-hidden="true">◐</span>
+          <p><strong>The best part:</strong> the surprise. You never fully know
+            what you captured until the negatives come back from the lab.</p>
         </div>
-
-        <section class="question" aria-labelledby="question-title">
-          <div class="question-heading">
-            <span class="question-number">Q1</span>
-            <div>
-              <h2 id="question-title">Give your page a visual style</h2>
-              <p>Open response <span aria-hidden="true">·</span> 50 points</p>
-            </div>
-          </div>
-
-          <p class="question-prompt">
-            Add a linked CSS file to your Homework 1 page. Use the checklist below
-            to make design choices that are both intentional and easy to see.
-          </p>
-
-          <ul class="requirements">
-            <li>
-              <span class="check" aria-hidden="true">01</span>
-              <span><strong>Link an external stylesheet.</strong> Add a
-                <code>&lt;link rel="stylesheet"&gt;</code> tag in the
-                <code>&lt;head&gt;</code> of your HTML file.</span>
-            </li>
-            <li>
-              <span class="check" aria-hidden="true">02</span>
-              <span><strong>Use three selector types.</strong> Include a type
-                selector (<code>p</code>), a class selector
-                (<code>.classname</code>), and an ID selector (<code>#id</code>).</span>
-            </li>
-            <li>
-              <span class="check" aria-hidden="true">03</span>
-              <span><strong>Show the box model on at least three elements.</strong>
-                Deliberately adjust margin, padding, and border to create space
-                and separation.</span>
-            </li>
-            <li>
-              <span class="check" aria-hidden="true">04</span>
-              <span><strong>Choose at least two complementary colors.</strong>
-                Apply them to text, backgrounds, or borders.</span>
-            </li>
-            <li>
-              <span class="check" aria-hidden="true">05</span>
-              <span><strong>Make it feel finished.</strong> Aim for consistent
-                spacing, color, and typography—not the browser defaults.</span>
-            </li>
-          </ul>
-        </section>
-
-        <section class="rubric" aria-labelledby="rubric-title">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">HOW YOU’LL BE GRADED</span>
-              <h2 id="rubric-title">Grading rubric</h2>
-            </div>
-            <span class="total-points">50 <span>PTS</span></span>
-          </div>
-
-          <div class="rubric-list">
-            <article class="rubric-item">
-              <div class="rubric-title">
-                <h3>Linked CSS file</h3>
-                <span>10 pts</span>
-              </div>
-              <ul class="rubric-levels">
-                <li><strong>Full credit · 10 pt</strong> CSS is linked in the head and visibly styles the page.</li>
-                <li><strong>No credit · 0 pt</strong> No external CSS, or styles are inline or in a style tag.</li>
-              </ul>
-            </article>
-            <article class="rubric-item">
-              <div class="rubric-title">
-                <h3>Three selector types</h3>
-                <span>10 pts</span>
-              </div>
-              <ul class="rubric-levels">
-                <li><strong>Full credit · 10 pt</strong> Type, class, and ID selectors are correctly written and applied.</li>
-                <li><strong>Partial · 6 pt</strong> Two types are correct, or one of the three has a syntax error.</li>
-                <li><strong>No credit · 0 pt</strong> Only one type is used, or selectors do not apply visible styles.</li>
-              </ul>
-            </article>
-            <article class="rubric-item">
-              <div class="rubric-title">
-                <h3>Box model demonstrated</h3>
-                <span>15 pts</span>
-              </div>
-              <ul class="rubric-levels">
-                <li><strong>Full credit · 15 pt</strong> Three or more elements use deliberate margin, padding, and border.</li>
-                <li><strong>Partial · 8 pt</strong> The box model appears on one or two elements, or all three properties are not used together.</li>
-                <li><strong>No credit · 0 pt</strong> No meaningful box-model styling; spacing remains at browser defaults.</li>
-              </ul>
-            </article>
-            <article class="rubric-item">
-              <div class="rubric-title">
-                <h3>Color scheme</h3>
-                <span>10 pts</span>
-              </div>
-              <ul class="rubric-levels">
-                <li><strong>Full credit · 10 pt</strong> At least two complementary colors are applied intentionally.</li>
-                <li><strong>Partial · 5 pt</strong> Only one custom color, or colors clash or feel random.</li>
-                <li><strong>No credit · 0 pt</strong> Only browser-default black, white, or blue.</li>
-              </ul>
-            </article>
-            <article class="rubric-item">
-              <div class="rubric-title">
-                <h3>Overall visual coherence</h3>
-                <span>5 pts</span>
-              </div>
-              <ul class="rubric-levels">
-                <li><strong>Full credit · 5 pt</strong> Consistent font, spacing, and colors create a unified style.</li>
-                <li><strong>No credit · 0 pt</strong> Styling is minimal or inconsistent and the page looks unstyled.</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <footer class="submission">
-          <span class="submission-icon" aria-hidden="true">↗</span>
-          <p><strong>Ready to submit?</strong><br>Share your GitHub repository URL. Make sure your CSS file is visible in the repo.</p>
-        </footer>
       </section>
-      <p class="course-footer">CSS FOUNDATIONS &amp; THE BOX MODEL <span>•</span> HOMEWORK 2</p>
 
-      <!-- ============================================================= -->
-      <!-- LECTURE 07 / 08 — RESPONSIVE GRID (uncomment live in lecture)  -->
-      <!-- ============================================================= -->
-      <!--
-        CHANGE 5 (CONDITIONAL): Viewport meta tag.
-        Already present in <head> above:
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-        Only add it to projects that are missing it.
-
-        CHANGE 1: Add a class to an existing parent that holds REPEATED content.
-        In a real project, keep your own repeated items (cards, products,
-        services, facts). Here is the demo markup used in the deck — uncomment
-        to show the Grid in action, or instead add class="card-grid" to a real
-        repeated container such as .rubric-list or .assignment-facts above.
-      -->
-      <!--
-      <section class="card-grid">
-        <article class="card">Soup</article>
-        <article class="card">Salad</article>
-        <article class="card">Dessert</article>
+      <section id="gear" class="block" aria-labelledby="gear-title">
+        <span class="eyebrow">GEAR</span>
+        <h2 id="gear-title">A beginner-friendly kit</h2>
+        <p class="block-lead">
+          You don't need expensive equipment to start. A reliable body, one
+          sharp lens, and a few rolls of stock will take you a long way.
+        </p>
+        <div class="card-grid">
+          <article class="card">
+            <h3>The camera</h3>
+            <p>A used 35mm SLR like a Pentax K1000 or Canon AE-1 — mechanical, repairable, and forgiving.</p>
+          </article>
+          <article class="card">
+            <h3>The lens</h3>
+            <p>A simple 50mm prime. It's inexpensive, sharp, and teaches you to move your feet to compose.</p>
+          </article>
+          <article class="card">
+            <h3>The film</h3>
+            <p>Start with an ISO 400 color stock. It's flexible in both bright sun and open shade.</p>
+          </article>
+        </div>
       </section>
-      -->
+
+      <section id="process" class="block" aria-labelledby="process-title">
+        <span class="eyebrow">PROCESS</span>
+        <h2 id="process-title">From empty roll to final scan</h2>
+        <ol class="steps">
+          <li>
+            <span class="step-num">01</span>
+            <span><strong>Load &amp; meter.</strong> Thread the leader, set your
+              ISO, and read the light before every shot.</span>
+          </li>
+          <li>
+            <span class="step-num">02</span>
+            <span><strong>Shoot deliberately.</strong> Compose, focus, and only
+              commit when the frame feels right.</span>
+          </li>
+          <li>
+            <span class="step-num">03</span>
+            <span><strong>Rewind &amp; develop.</strong> Finish the roll, rewind,
+              and send it to a lab — or develop at home.</span>
+          </li>
+          <li>
+            <span class="step-num">04</span>
+            <span><strong>Scan &amp; share.</strong> Digitize the negatives, make
+              light edits, and enjoy the grain.</span>
+          </li>
+        </ol>
+      </section>
+
+      <section id="tips" class="block" aria-labelledby="tips-title">
+        <span class="eyebrow">TIPS</span>
+        <h2 id="tips-title">Lessons learned the hard way</h2>
+        <ul class="requirements">
+          <li>
+            <span class="check" aria-hidden="true">01</span>
+            <span><strong>Overexpose color negative film.</strong> It handles
+              extra light gracefully and keeps shadows clean.</span>
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">02</span>
+            <span><strong>Keep a notes app handy.</strong> Jot down settings so
+              you can learn from each roll.</span>
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">03</span>
+            <span><strong>Protect film from heat.</strong> Don't leave rolls in
+              a hot car — store them cool.</span>
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">04</span>
+            <span><strong>Finish the roll.</strong> Don't let a half-used roll
+              sit for months; shoot it and send it off.</span>
+          </li>
+        </ul>
+      </section>
+
+      <footer class="cta" aria-labelledby="cta-title">
+        <span class="cta-icon" aria-hidden="true">✶</span>
+        <div>
+          <h2 id="cta-title">Go shoot a roll</h2>
+          <p>Grab a camera, load some film, and let the world surprise you one frame at a time.</p>
+        </div>
+      </footer>
+
+      <p class="site-footer">GRAIN &amp; LIGHT <span>•</span> A FILM PHOTOGRAPHY HOBBY PAGE</p>
     </main>
   </body>
 </html>
