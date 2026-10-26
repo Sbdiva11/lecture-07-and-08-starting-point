@@ -32,17 +32,27 @@ a {
   color: inherit;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 68px;
   padding: 0 max(28px, calc((100vw - 1000px) / 2));
   border-bottom: 1px solid var(--line);
-  background: var(--white);
+  background: rgb(255 255 255 / 92%);
+  backdrop-filter: blur(6px);
 }
 
-.course-name {
+.brand {
   color: var(--ink);
   font-family: "Manrope", sans-serif;
   font-size: 13px;
@@ -51,93 +61,40 @@ a {
   text-decoration: none;
 }
 
-.course-name span {
+.brand span {
   padding: 0 3px;
   color: var(--coral);
 }
 
-.view-label,
-.eyebrow,
-.fact-label {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-}
-
-.view-label {
-  color: var(--muted);
-}
-
-#assignment {
-  width: min(100% - 40px, 760px);
-  margin: 33px auto 24px;
-}
-
-.breadcrumb {
+.site-nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  margin: 0 0 18px 3px;
+  gap: 20px;
+}
+
+.site-nav a {
   color: var(--muted);
   font-size: 12px;
-}
-
-.breadcrumb a {
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-decoration: none;
 }
 
-.breadcrumb a:hover {
+.site-nav a:hover {
   color: var(--teal-dark);
-  text-decoration: underline;
 }
 
-.assignment-card {
-  padding: 38px 44px 0;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--white);
-  box-shadow: 0 10px 35px rgb(23 43 53 / 5%);
+/* Layout */
+main {
+  width: min(100% - 40px, 760px);
+  margin: 0 auto;
 }
 
-.assignment-topline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.assignment-type {
-  color: var(--teal-dark);
+.eyebrow {
+  display: block;
+  color: var(--teal);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.12em;
-}
-
-.assignment-type span {
-  margin-right: 5px;
-  color: var(--coral);
-  font-size: 15px;
-  vertical-align: -1px;
-}
-
-.overdue {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 5px 9px;
-  border: 1px solid #f4ded8;
-  border-radius: 20px;
-  background: #fff8f6;
-  color: #a44936;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-.overdue span {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--coral);
 }
 
 h1,
@@ -153,26 +110,31 @@ h3 {
   font-family: "Manrope", sans-serif;
 }
 
-h1 {
-  margin: 17px 0 8px;
-  font-size: clamp(30px, 5vw, 38px);
+/* Hero */
+.hero {
+  padding: 56px 0 10px;
+}
+
+.hero h1 {
+  margin: 14px 0 12px;
+  font-size: clamp(32px, 6vw, 46px);
   font-weight: 800;
   letter-spacing: -0.045em;
-  line-height: 1.2;
+  line-height: 1.12;
 }
 
 .intro {
-  max-width: 570px;
-  margin-bottom: 25px;
+  max-width: 600px;
+  margin-bottom: 26px;
   color: #596d74;
-  font-size: 15px;
+  font-size: 16px;
 }
 
-.assignment-facts {
+.hero-facts {
   display: grid;
-  grid-template-columns: 0.8fr 1.6fr 0.8fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
-  padding: 16px 0;
+  padding: 18px 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -180,46 +142,71 @@ h1 {
 .fact {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 4px;
 }
 
 .fact-label {
   color: var(--muted);
   font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
 }
 
 .fact strong {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
 }
 
-.late-note {
+/* Content blocks */
+.block {
+  padding: 40px 0;
+  border-top: 1px solid var(--line);
+}
+
+.block:first-of-type {
+  border-top: none;
+}
+
+.block h2 {
+  margin: 6px 0 14px;
+  font-size: clamp(22px, 4vw, 28px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.block-lead {
+  max-width: 620px;
+  color: #4f6269;
+  font-size: 15px;
+}
+
+/* Note box */
+.note {
   display: flex;
   align-items: center;
-  gap: 11px;
-  margin: 17px 0 28px;
-  padding: 11px 14px;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 14px 16px;
   border: 1px solid #dcece7;
-  border-radius: 6px;
+  border-radius: 8px;
   background: var(--teal-soft);
 }
 
-.late-note p {
+.note p {
   margin: 0;
   color: #49635f;
-  font-size: 12px;
+  font-size: 13px;
 }
 
-.late-note strong {
+.note strong {
   color: var(--teal-dark);
 }
 
-.late-icon,
-.submission-icon {
+.note-icon {
   display: grid;
-  flex: 0 0 27px;
-  width: 27px;
-  height: 27px;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
   place-items: center;
   border-radius: 50%;
   background: var(--white);
@@ -227,51 +214,79 @@ h1 {
   font-size: 16px;
 }
 
-.question {
-  padding: 23px 0 27px;
-  border-top: 1px solid var(--line);
+/* Card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 22px;
 }
 
-.question-heading {
-  display: flex;
-  align-items: flex-start;
-  gap: 13px;
+@media (min-width: 640px) {
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
-.question-number {
-  padding: 4px 7px;
-  border: 1px solid #cce3dd;
-  border-radius: 4px;
-  background: var(--teal-soft);
-  color: var(--teal-dark);
-  font-size: 11px;
+.card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--white);
+  box-shadow: 0 10px 30px rgb(23 43 53 / 5%);
+}
+
+.card h3 {
+  margin: 0 0 7px;
+  font-size: 14px;
   font-weight: 700;
 }
 
-.question-heading h2 {
+.card p {
   margin: 0;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.4;
-}
-
-.question-heading p {
-  margin: 3px 0 0;
   color: var(--muted);
-  font-size: 11px;
-}
-
-.question-prompt {
-  margin: 19px 0 14px;
-  color: #4f6269;
   font-size: 13px;
 }
 
+/* Steps */
+.steps {
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.steps li {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 14px 0;
+  border-top: 1px solid #edf1ef;
+  color: #4f6269;
+  font-size: 14px;
+}
+
+.steps li:last-child {
+  border-bottom: 1px solid #edf1ef;
+}
+
+.step-num {
+  color: var(--teal);
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.steps strong {
+  color: var(--ink);
+}
+
+/* Tips list */
 .requirements {
   display: grid;
   gap: 0;
-  margin: 0;
+  margin: 22px 0 0;
   padding: 0;
   list-style: none;
 }
@@ -280,11 +295,11 @@ h1 {
   display: grid;
   grid-template-columns: 30px 1fr;
   gap: 10px;
-  padding: 12px 0;
+  padding: 13px 0;
   border-top: 1px solid #edf1ef;
   color: #4f6269;
-  font-size: 12px;
-  line-height: 1.65;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .requirements li:last-child {
@@ -297,147 +312,53 @@ h1 {
 }
 
 .check {
-  padding-top: 2px;
+  padding-top: 1px;
   color: var(--teal);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.04em;
 }
 
-code {
-  padding: 2px 4px;
-  border-radius: 3px;
-  background: #f0f4f2;
-  color: var(--teal-dark);
-  font-size: 0.9em;
-}
-
-.rubric {
-  margin: 0 -44px;
-  padding: 25px 44px 27px;
-  border-top: 1px solid var(--line);
-  background: #fafcfb;
-}
-
-.section-heading {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-bottom: 14px;
-}
-
-.eyebrow {
-  color: var(--teal);
-  font-size: 9px;
-}
-
-.section-heading h2 {
-  margin: 2px 0 0;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-}
-
-.total-points {
-  color: var(--teal-dark);
-  font-family: "Manrope", sans-serif;
-  font-size: 19px;
-  font-weight: 800;
-}
-
-.total-points span {
-  color: var(--muted);
-  font-family: "DM Sans", sans-serif;
-  font-size: 9px;
-  letter-spacing: 0.08em;
-}
-
-.rubric-item {
-  padding: 12px 0 11px;
-  border-top: 1px solid var(--line);
-}
-
-.rubric-title {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.rubric-title h3 {
-  margin: 0;
-  font-family: "DM Sans", sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.rubric-title > span {
-  color: var(--teal-dark);
-  font-size: 11px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.rubric-item p {
-  margin: 2px 0 8px;
-  color: var(--muted);
-  font-size: 11px;
-}
-
-.rubric-levels {
-  display: grid;
-  gap: 4px;
-  margin: 8px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.rubric-levels li {
-  display: grid;
-  grid-template-columns: 116px 1fr;
-  gap: 8px;
-  padding: 5px 8px;
-  border-radius: 4px;
-  background: var(--white);
-  color: var(--muted);
-  font-size: 10px;
-  line-height: 1.5;
-}
-
-.rubric-levels strong {
-  color: var(--teal-dark);
-  font-size: 9px;
-  white-space: nowrap;
-}
-
-.submission {
+/* Call to action */
+.cta {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin: 0 -44px;
-  padding: 17px 44px;
-  border-top: 1px solid var(--line);
-  border-radius: 0 0 12px 12px;
+  gap: 16px;
+  margin: 24px 0 0;
+  padding: 26px 28px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
   background: var(--white);
+  box-shadow: 0 10px 35px rgb(23 43 53 / 5%);
 }
 
-.submission-icon {
+.cta-icon {
+  display: grid;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 50%;
   background: var(--teal-soft);
+  color: var(--teal);
+  font-size: 20px;
 }
 
-.submission p {
+.cta h2 {
+  margin: 0 0 4px;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.cta p {
   margin: 0;
   color: var(--muted);
-  font-size: 11px;
-  line-height: 1.55;
+  font-size: 13px;
 }
 
-.submission strong {
-  color: var(--ink);
-  font-size: 12px;
-}
-
-.course-footer {
-  margin: 18px 0 0;
+.site-footer {
+  margin: 22px 0 36px;
   color: #8c9b9e;
   font-size: 9px;
   font-weight: 700;
@@ -445,7 +366,7 @@ code {
   text-align: center;
 }
 
-.course-footer span {
+.site-footer span {
   padding: 0 5px;
   color: var(--coral);
 }
@@ -456,116 +377,30 @@ code {
     padding: 0 20px;
   }
 
-  #assignment {
-    width: min(100% - 24px, 760px);
-    margin-top: 21px;
+  .site-nav {
+    display: none;
   }
 
-  .breadcrumb {
-    gap: 6px;
-    font-size: 10px;
+  main {
+    width: min(100% - 32px, 760px);
   }
 
-  .assignment-card {
-    padding: 26px 22px 0;
+  .hero {
+    padding: 38px 0 6px;
   }
 
-  .assignment-facts {
-    grid-template-columns: 1fr 1.45fr;
-    row-gap: 12px;
+  .hero-facts {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 14px;
   }
 
-  .assignment-facts .fact:last-child {
+  .hero-facts .fact:last-child {
     grid-column: 1 / -1;
   }
 
-  .rubric {
-    margin: 0 -22px;
-    padding: 23px 22px;
-  }
-
-  .submission {
-    margin: 0 -22px;
-    padding: 16px 22px;
+  .cta {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
   }
 }
-
-/* ================================================================= */
-/* LECTURE 07 / 08 — RESPONSIVE GRID (uncomment live in lecture)      */
-/* ================================================================= */
-
-/* CHANGE 2: Global box-sizing.
-   Already declared near the top of this file:
-       * { box-sizing: border-box; }
-   Makes declared widths include padding and border. No action needed
-   here unless a project is missing it. */
-
-/* CHANGE 3 (PROVISIONAL / DESKTOP-FIRST DEMO): Initial three-column Grid.
-   Show this first to demonstrate a Grid container, then REPLACE it with
-   the mobile-first base rule in CHANGE 4 (do not leave both in place). */
-/*
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-}
-*/
-
-/* CHANGE 4 (FINAL BASE RULE / MOBILE-FIRST): One column by default.
-   This replaces the CHANGE 3 demo above. Below 640px the layout is a
-   single readable column with no sideways scrolling. */
-/*
-.card-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-*/
-
-/* CHANGE 8 (SAFETY CHECK): Responsive image protection.
-   Recommended whenever the page contains images. */
-/*
-img {
-  max-width: 100%;
-  height: auto;
-}
-*/
-
-/* CHANGE 6: Tablet media query — two columns at >= 640px. */
-/*
-@media (min-width: 640px) {
-  .card-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-*/
-
-/* CHANGE 7: Desktop media query — three columns at >= 1024px. */
-/*
-@media (min-width: 1024px) {
-  .card-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-*/
-
-/* CHANGE 9 (PROJECT-SPECIFIC CORRECTIONS): Discovered while testing at
-   320px, 768px, and 1200px. Fix the CAUSE of overflow rather than hiding
-   it with overflow: hidden. A common repair for Grid/Flex children that
-   refuse to shrink is min-width: 0 on the constrained child. The exact
-   selector depends on your page, so this is only a template. */
-/*
-.some-grid-or-flex-child {
-  min-width: 0;
-}
-*/
-
-/* FLEXBOX ALTERNATIVE: The lecture allows Flexbox instead of Grid and
-   introduces these two properties, but does not demonstrate a complete
-   column implementation. Grid is the fully demonstrated path. */
-/*
-.card-grid {
-  display: flex;
-  flex-wrap: wrap;
-}
-*/
