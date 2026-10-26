@@ -489,3 +489,83 @@ code {
     padding: 16px 22px;
   }
 }
+
+/* ================================================================= */
+/* LECTURE 07 / 08 — RESPONSIVE GRID (uncomment live in lecture)      */
+/* ================================================================= */
+
+/* CHANGE 2: Global box-sizing.
+   Already declared near the top of this file:
+       * { box-sizing: border-box; }
+   Makes declared widths include padding and border. No action needed
+   here unless a project is missing it. */
+
+/* CHANGE 3 (PROVISIONAL / DESKTOP-FIRST DEMO): Initial three-column Grid.
+   Show this first to demonstrate a Grid container, then REPLACE it with
+   the mobile-first base rule in CHANGE 4 (do not leave both in place). */
+/*
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+*/
+
+/* CHANGE 4 (FINAL BASE RULE / MOBILE-FIRST): One column by default.
+   This replaces the CHANGE 3 demo above. Below 640px the layout is a
+   single readable column with no sideways scrolling. */
+/*
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+*/
+
+/* CHANGE 8 (SAFETY CHECK): Responsive image protection.
+   Recommended whenever the page contains images. */
+/*
+img {
+  max-width: 100%;
+  height: auto;
+}
+*/
+
+/* CHANGE 6: Tablet media query — two columns at >= 640px. */
+/*
+@media (min-width: 640px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+*/
+
+/* CHANGE 7: Desktop media query — three columns at >= 1024px. */
+/*
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+*/
+
+/* CHANGE 9 (PROJECT-SPECIFIC CORRECTIONS): Discovered while testing at
+   320px, 768px, and 1200px. Fix the CAUSE of overflow rather than hiding
+   it with overflow: hidden. A common repair for Grid/Flex children that
+   refuse to shrink is min-width: 0 on the constrained child. The exact
+   selector depends on your page, so this is only a template. */
+/*
+.some-grid-or-flex-child {
+  min-width: 0;
+}
+*/
+
+/* FLEXBOX ALTERNATIVE: The lecture allows Flexbox instead of Grid and
+   introduces these two properties, but does not demonstrate a complete
+   column implementation. Grid is the fully demonstrated path. */
+/*
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+*/
