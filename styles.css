@@ -383,19 +383,30 @@ code {
   font-size: 11px;
 }
 
-.rubric-track {
-  height: 3px;
-  overflow: hidden;
-  border-radius: 5px;
-  background: #e8efec;
+.rubric-levels {
+  display: grid;
+  gap: 4px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
 }
 
-.rubric-track span {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  background: var(--teal);
+.rubric-levels li {
+  display: grid;
+  grid-template-columns: 116px 1fr;
+  gap: 8px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.rubric-levels strong {
+  color: var(--teal-dark);
+  font-size: 9px;
+  white-space: nowrap;
 }
 
 .submission {
